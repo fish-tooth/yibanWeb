@@ -1,19 +1,20 @@
-const { errorResponse } = require('../common/response')
+import * as Koa from "koa";
+import { errorResponse } from "../common/response";
 
-module.exports = async function errorCatcher(ctx, next) {
+export async function errorCatcher(ctx: Koa.Context, next: Koa.Next) {
   /**
    * 捕获所有中间件执行的错误信息
    */
   try {
     await next();
   } catch (e) {
-    console.error('errorCatch:', e);
-    if (e == 'UnauthorizedError: Authentication Error') {
+    console.error("errorCatch:", e);
+    if (e == "UnauthorizedError: Authentication Error") {
       ctx.body = errorResponse({
         code: 600,
         errMsg: e.message,
       });
-      return
+      return;
     }
     //  e.code 是undefined  就会选择默认的
     ctx.body = errorResponse({
@@ -21,4 +22,4 @@ module.exports = async function errorCatcher(ctx, next) {
       errMsg: e.message,
     });
   }
-};
+}

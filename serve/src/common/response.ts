@@ -32,7 +32,7 @@ function errorResponse({ code = CODE.error, status = 'error', errMsg = '' }) {
   };
 }
 // ===exports
-module.exports = {
+export {
   successResponse,
   errorResponse,
   CODE,

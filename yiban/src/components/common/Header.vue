@@ -1,5 +1,7 @@
+<!-- 公共组件 -->
+
 <template>
-  <div>404 not found</div>
+  <div>可以做顶部导航</div>
 </template>
 
 <script setup lang="ts"></script>
