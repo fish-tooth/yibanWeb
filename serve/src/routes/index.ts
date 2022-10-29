@@ -5,7 +5,7 @@ import { errorResponse, successResponse } from "../common/response";
 
 const router = new Router();
 
-// idiom相关：
+
 router.get("/api/getData", (ctx: Koa.Context, next: Koa.Next) => {
   ctx.body = successResponse({
     msg: "获取数据成功",

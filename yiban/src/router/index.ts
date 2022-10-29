@@ -13,7 +13,6 @@ const routes = [
     path: "/",
     name: "HelloWorld",
     component: () => import("../components/HelloWorld.vue"),
-    // chirlden:[]
   },
 ];
 
