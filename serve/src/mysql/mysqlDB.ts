@@ -7,6 +7,7 @@ const config = {
   user: "root",
   password: "123456",
   database: "yiban",
+  charset: "utf8mb4",
 };
 
 const __connection = () => {
@@ -22,19 +23,25 @@ const query = (sql: string, parmas: object = null) => {
       //1.获取数据库连接对象
       const connection = __connection();
       //2执行sql语句
-      connection.query(
-        sql,
-        parmas,
-        function (error, results: any, fields) {
-          if (error) throw new Error(String(error));
+      connection.query(sql, parmas, function (error, results: any, fields) {
+        if (error) {
+          console.log("数据库错误:", error);
+          reject({
+            code:502,
+            message:"数据库错误"
+          });
+        } else {
           resolve(results);
         }
-      );
+      });
       //3关闭连接
       connection.end();
     } catch (e) {
-      reject(e);
-      throw new Error(String(e));
+      console.log("try catch数据库错误:", e);
+      reject({
+        code:502,
+        message:"数据库错误"
+      });
     }
   });
 };
@@ -50,17 +57,27 @@ const operate = (sql: string, parmas: object = null) => {
         sql,
         parmas,
         function (error, results: OkPacket, fields) {
-          if (error) throw new Error(String(error));
-          resolve(results);
+          if (error) {
+            console.log("数据库错误:", error);
+            reject({
+              code:502,
+              message:"数据库错误"
+            });
+          } else {
+            resolve(results);
+          }
         }
       );
       //3关闭连接
       connection.end();
     } catch (e) {
-      reject(e);
-      throw new Error(String(e));
+      console.log("try catch数据库错误:", e);
+      reject({
+        code:502,
+        message:"数据库错误"
+      });
     }
   });
 };
 
-export { query, operate ,OkPacket};
+export { query, operate, OkPacket };

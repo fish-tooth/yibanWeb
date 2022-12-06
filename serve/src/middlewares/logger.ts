@@ -16,7 +16,7 @@ export async function logger(ctx: Koa.Context, next: Koa.Next) {
  * 开始调用
  */
 async function logStart(ctx: Koa.Context) {
-  let params = Object.assign({}, ctx.request.query, ctx.request.body);
+  const params = Object.assign({}, ctx.request.query, ctx.request.body);
   console.log(`loger日志: request.params:${JSON.stringify(params)}`);
 }
 
