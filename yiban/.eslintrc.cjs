@@ -46,6 +46,7 @@ module.exports = {
         // 'vue/multi-word-component-names': 1,
 
         // '@typescript-eslint/array-type': 2,
+        'vue/multi-word-component-names': [1],
         'no-console': [1], // 对于 console 进行警告
         'no-unused-vars': ['warn'], // 对于未使用的变量进行警告
     }
