@@ -10,6 +10,7 @@ const routes = [
   //   name: "home",
   //   component: () => import("../components/home.vue"),
   // },
+  
   //activityCase
   {
     path:"/",
