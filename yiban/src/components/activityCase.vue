@@ -365,7 +365,6 @@
     // text-align: center;
     // vertical-align: top;
     position: absolute;
-    
 }
 .cases {
     display: flex;
