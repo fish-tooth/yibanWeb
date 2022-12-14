@@ -5,18 +5,16 @@ const routes = [
     path: "/:catchAll(.*)",
     component: () => import("../components/notFound.vue"),
   },
-  // {
-  //   path: "/",
-  //   name: "home",
-  //   component: () => import("../components/home.vue"),
-  // },
-  //activityCase
   {
-    path:"/",
-    name:"activityCase",
-    component:() => import("../components/activityCase.vue")
-
-  }
+    path: "/",
+    name: "home",
+    component: () => import("../components/home.vue"),
+  },
+  {
+    path: "/activityCase",
+    name: "activityCase",
+    component: () => import("../components/activityCase.vue"),
+  },
 ];
 
 const router = createRouter({
