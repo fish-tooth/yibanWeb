@@ -37,7 +37,7 @@ $hover-color: rgba(238, 106, 107, 1);
   left: 0;
   right: 0;
   background-color: white;
-  width: 100%;
+  width: 1440px;
   min-height: 80px;
   @extend %common-flex;
   justify-content: space-between;
