@@ -22,31 +22,50 @@
                 系统化新观念、聚焦现代化新内涵所作出的科学擘画，必将为以中国式现代化全面推进中华民族伟大复兴提供更雄厚人才
                 基础和更强大战略支撑。</p>
             </div>
-            <div class="more"><a href="#"><div class="moreTo">查看更多</div></a></div>
-            <div class="video"></div>
+            <div class="more">
+                <div class="moreTo"><a href="#" style="text-decoration: none; color: black;">查看更多</a></div>
+                <div class="icon1"></div>
+                    <!-- <img src="../../public/微信图片_20221216173825.png" alt=""> -->
+    
+            </div>
+            <div class="video">
+               <!-- 添加视频 -->
+               <div class="nameBg"><div class="projectName">“以爱之名，伴你成长”青少年关爱帮扶活动</div></div>
+            </div>
         <div class="dataShow">
-            <div class="data1"></div>
-            <div class="data2"></div>
-            <div class="data3"></div>
-            <div class="data4"></div>
+            <div class="data1"><div class="dataNum1">4</div><div class="dataTitle1">项目总数</div></div>
+            <div class="data2"><div class="dataNum2">5100</div><div class="dataTitle2">志愿者人数</div></div>
+            <div class="data3"><div class="dataNum3">3124</div><div class="dataTitle3">服务学生数</div></div>
+            <div class="data4"><div class="dataNum4">2140</div><div class="dataTitle4">课堂总量</div></div>
         </div>
     </div>
     
     <div class="botmBox">
         <div class="classicCaseText">经典案例 ｜CASE</div>
         <div class="cases">
+            <!-- 插入链接 -->
             <div class="case1">
-                <div class="casePhoto"></div>
-                <div class="caseIntro"></div>
+                <div class="casePhoto1"></div>
+                <div class="caseIntro1">
+                    <div class="caseName">案例名称</div>
+                </div>
             </div>
             <div class="case2">
-                <div class="casePhoto"></div>
-                <div class="caseIntro"></div>
+                <div class="casePhoto2"></div>
+                <div class="caseIntro2">
+                    <div class="caseName">案例名称</div>
+                </div>
             </div>
         </div>
         <div class="turn">
-            <div class="last"></div>
-            <div class="next"></div>
+            <a href="#"><div class="last"><img src="../../public/last1.svg" alt=""></div></a>
+            <a href="#"><div class="next"><img src="../../public/next1.svg" alt=""></div></a>
+        </div>
+    </div>
+    <div class="blogBox">
+        <div class="blogTitle">
+            <span class="blogImg"></span>
+            <span class="blogText">志愿分享 | BLOG</span>
         </div>
     </div>
 </template>
@@ -54,6 +73,7 @@
 
 <style lang="scss" scoped>
 
+    
 //绝对定位
 %pos {
     position: absolute;
@@ -209,6 +229,7 @@
     left: 0px;
     top: 1010px;
     width: 1440px;
+    // width: 100%;
     height: 998px;
     //add
     position: absolute;
@@ -259,7 +280,7 @@
 .more {
     left: 90px;
     top: 650px;
-    width: 298px;
+    width: 230px;
     height: 64.25px;
     opacity: 1;
     background: rgba(209, 146, 146, 0.56);
@@ -271,33 +292,61 @@
     top: 192px;
     width: 600px;
     height: 400px;
-    // left: 582.65px;
-    // top: 192px;
-    // width: 732.38px;
-    // height: 549px;
     opacity: 1;
     border-radius: 13px;
     background: url(https://img.js.design/assets/img/63841db370139645b61f7887.png#68c43d6f1a06b5512316ea25cbdc98d5);
     position: absolute;
 }
+.nameBg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    opacity: 0.6;
+    background-color: rgb(56, 56, 56);
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+.projectName {
+    left: 40px;
+    opacity: 1;
+    /** 文本1 */
+    font-size: 18px;
+    font-weight: 400;
+    // letter-spacing: 0px;
+    line-height: 60px;
+    color: rgba(255, 255, 255, 1);
+    text-align: left;
+    vertical-align: top;
+    position: absolute;
+
+}
 .moreTo {
     left: 46px;
-    top: 17px;
     width: 210px;
-    height: 35px;
+    height: 64px;
     opacity: 1;
     /** 文本1 */
     font-size: 24px;
     font-weight: 300;
     letter-spacing: 0px;
-    // line-height: 0px;
+    line-height: 64px;
     color: rgba(0, 0, 0, 1);
     text-align: left;
     vertical-align: top;
     //add
     position: absolute;
+}
 
-
+.icon1 {
+    position: absolute;
+    left: 140px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    background: url(../../public/arrow.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
 }
 .dataShow {
     display: flex;
@@ -311,40 +360,82 @@
 }
 
 .data1 {
+    position: relative;
     margin-left: 130px;
     width: 300px;
     height: 171px;
     line-height: 171px;
-    background-color: pink;
+}
+
+%num {
+    position: absolute;
+    // margin-left: 130px;
+    left: 40%;
+    top: 22px;
+    // width: 40px;
+    height: 72px;
+    opacity: 1;
+    /** 文本1 */
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    color: rgba(0, 0, 0, 1);
+    border-bottom: 2px solid rgba(173, 106, 106, 1); 
+}
+.dataNum1, .dataNum2, .dataNum3, .dataNum4 {
+    @extend %num;
+}
+%dataTitle {
+    position: absolute;
+    left: 37%;
+    top: 60%;
+    // width: 125px;
+    height: 44px;
+    opacity: 1;
+    /** 文本1 */
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 44px;
+    color: rgba(0, 0, 0, 1);
+}
+.dataTitle1 {
+    @extend %dataTitle;
+    left: 28%;
+}
+.dataTitle2, .dataTitle3 {
+    @extend %dataTitle;
+}
+.dataTitle4 {
+    @extend %dataTitle;
+    left: 43%;
 }
 .data2 {
-    
+    position: relative;
     width: 300px;
     height: 171px;
     line-height: 171px;
-    background-color: pink;
 }
 .data3 {
-    
+    position: relative;
     width: 300px;
     height: 171px;
     line-height: 171px;
-    background-color: pink;
 }
 .data4 {
-    
+    position: relative;
     width: 300px;
     height: 171px;
     line-height: 171px;
-    background-color: pink;
 }
 
 .botmBox {
     position: absolute;
     // top: 2127px;
     top: 2157px;
-    left: 61px;
-    width: 1316px;
+    margin-left: 160px;
+    width: 1440px;
+    // width: 100%;
     height: 863px;
     // background-color: yellow;
 
@@ -383,7 +474,7 @@
     left: 61px;
     @extend %case;
 }
-.case1 .casePhoto{
+.case1 .casePhoto1 {
     width: 628px;
     height: 419px;
     opacity: 1;
@@ -391,7 +482,7 @@
     background: url(https://img.js.design/assets/img/63842fc24d2016ae96de6951.png#a6838d3bb6640227f8a416599f350ca3);
 
 }
-.case1 .caseIntro {
+.case1 .caseIntro1 {
     left: 62px;
     // top: 2708px;
     width: 618px;
@@ -401,18 +492,29 @@
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25);
 
 }
+.caseName {
+    line-height: 84px;
+    opacity: 1;
+    /** 文本1 */
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    vertical-align: top;
+
+}
 .case2 {
     margin-left: 41px;
     @extend %case;
 }
-.case2 .casePhoto {
+.case2 .casePhoto2 {
     width: 628px;
     height: 419px;
     opacity: 1;
     border-radius: 13px;
     background: url(https://img.js.design/assets/img/63842fc24d2016ae96de6951.png#a6838d3bb6640227f8a416599f350ca3);
 }
-.case2 .caseIntro {
+.case2 .caseIntro2 {
     width: 618px;
     height: 84px;
     opacity: 1;
@@ -423,22 +525,64 @@
     display: flex;
     position: absolute;
     left: 538px;
-    top: 700px;
+    top: 630px;
    
 }
 .turn .last{
-    
-    
     width: 97px;
     height: 54px;
     opacity: 1;
     border: 1px solid rgba(237, 157, 157, 1);     
+    text-align: center;
 }
 .turn .next {
     width: 97px;
     height: 54px;
     opacity: 1;
     background: rgba(223, 114, 113, 0.8);
-    border: 1px solid rgba(237, 157, 157, 1);   
+    border: 1px solid rgba(237, 157, 157, 1); 
+    text-align: center;  
+}
+//志愿分享blog
+.blogBox {
+    // left: -6px;
+    top: 2930px;
+    width: 1440px;
+    // width: 100%;
+    height: 624px;
+    opacity: 1;
+    background: rgba(223, 114, 113, 0.15);
+    position: absolute;
+}
+.blogImg {
+    display: inline-block;
+    left: -57px;
+    top: 3172px;
+    width: 210px;
+    height: 100px;
+    opacity: 1;
+    // background: url(https://img.js.design/assets/img/6384510a5bcbfa4c60fab5fa.png#ee85aa49dae8f3a60383b8a15c5dadb6) no-repeat;
+    background: url(../../public/flower.png) no-repeat;
+    background-blend-mode: multiply;
+    background-size: 100%;
+
+}
+.blogText {
+    position: absolute;
+    display: inline-block;
+    left: 161px;
+    top: 20px;
+    width: 393px;
+    height: 74px;
+    opacity: 1;
+    /** 文本1 */
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: 74px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+    vertical-align: top;
+    
 }
 </style>

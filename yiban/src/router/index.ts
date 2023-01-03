@@ -12,6 +12,7 @@ const routes = [
   },
   {
     path: "/activityCase",
+    // path: "/",
     name: "activityCase",
     component: () => import("../components/activityCase.vue"),
   },
