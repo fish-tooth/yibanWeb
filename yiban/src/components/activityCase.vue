@@ -352,7 +352,7 @@
     display: flex;
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 1440px;
     height: 171px;
     opacity: 1;
     background: linear-gradient(180deg, rgba(223, 114, 113, 0) 0%, rgba(222, 115, 113, 0.08) 28.57%, rgba(222, 115, 113, 0.15) 84.45%);
@@ -433,7 +433,7 @@
     position: absolute;
     // top: 2127px;
     top: 2157px;
-    margin-left: 160px;
+    // margin-left: 160px;
     width: 1440px;
     // width: 100%;
     height: 863px;
@@ -466,11 +466,13 @@
     // background-color: rgb(118, 144, 166);
 }
 %case {
+    
     top: 2290px;
     width: 628px;
     height: 501px;
 }
 .case1 {
+    position: sticky;
     left: 61px;
     @extend %case;
 }
@@ -483,7 +485,7 @@
 
 }
 .case1 .caseIntro1 {
-    left: 62px;
+    left: 60px;
     // top: 2708px;
     width: 618px;
     height: 84px;
@@ -504,7 +506,8 @@
 
 }
 .case2 {
-    margin-left: 41px;
+    // position: sticky;
+    margin-left: 100px;
     @extend %case;
 }
 .case2 .casePhoto2 {
@@ -524,7 +527,8 @@
 .turn {
     display: flex;
     position: absolute;
-    left: 538px;
+    // left: 538px;
+    left: 600px;
     top: 630px;
    
 }
