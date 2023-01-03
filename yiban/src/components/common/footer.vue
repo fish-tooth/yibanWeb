@@ -33,6 +33,16 @@ $family3: 思源黑体;
   top: $top;
   position: absolute;
 }
+
+%align-top{
+  text-align: left;
+  vertical-align: top;
+}
+
+%align-mid{
+  text-align: left;
+  vertical-align: middle;
+}
 .logo {
   @include size-position(40px, 40px, 37px, 48px);
 }
@@ -40,8 +50,9 @@ $family3: 思源黑体;
 .name {
   @include size-position(90px, 44px, 85px, 44px);
   font: 400 18px/22px $family1 ;
-  text-align: left;
-  vertical-align: top;
+  @extend %align-top;
+  // text-align: left;
+  // vertical-align: top;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -63,8 +74,9 @@ $family3: 思源黑体;
   @include size-position(80px, 21px, 0,0 );
   font: 500 14px/21px $family3;
   color: rgba(255, 255, 255, 1);
-  text-align: left;
-  vertical-align: middle;
+  @extend %align-mid;
+  // text-align: left;
+  // vertical-align: middle;
 }
 
 %footList {
@@ -72,8 +84,9 @@ $family3: 思源黑体;
   height: 18px;
   font: 400 12px/18px $family3;
   color: rgba(179, 179, 179, 1);
-  text-align: left;
-  vertical-align: middle;
+  @extend %align-mid;
+  // text-align: left;
+  // vertical-align: middle;
   position: absolute;
 }
 

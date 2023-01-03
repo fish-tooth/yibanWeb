@@ -35,14 +35,13 @@
       <div class="numberBackground">
         <div class="number1">10087</div>
         <div class="number11">累计陪伴学生10087人</div>
-
         <div class="number2">2019</div>
         <div class="number21">累计参加志愿者2019人</div>
-
         <div class="number3">215</div>
         <div class="number31">累计开展专项辅导陪伴项目215个</div>
       </div>
     </div>
+
 
     <div class="coreBusiness">
       <div class="coreTitle">我们的核心工作</div>
@@ -84,13 +83,13 @@
         </div>
       </div>
     </div>
-
     <div class="cooperationPartner">
       <div class="partnerTitle">合作伙伴</div>
       <img class="partnerImg"
         src="https://img.js.design/assets/img/6378c6dd6e9a5c7685b46cb0.png#de5e646163aafe80259239543453a409"
         alt="图片加载失败" />
     </div>
+
   </div>
 </template>
 
@@ -132,7 +131,9 @@ export default {};
 }
 
 // -------------------------------
-$position: absolute;
+%pos {
+  position: absolute;
+}
 
 %align {
   text-align: left;
@@ -161,7 +162,8 @@ $family4: 优设标题圆;
 
 .picture {
   @include size-position(1440px, 960px, 0, -105px);
-  position: $position;
+  // @include size-position(100%, 50%, 0, -105px);
+  @extend %pos;
 
   background: {
     image: url("https://img.js.design/assets/img/636514531beac627deafba54.jpg#e228673ae2cf533f1f33bd1393df4df0");
@@ -171,13 +173,13 @@ $family4: 优设标题圆;
   >.border {
     @include size-position(523px, 9px, 142px, 439px);
     background: rgba(238, 106, 107, 1);
-    position: $position;
+    @extend %pos;
   }
 
   >.noteBackground {
     @include size-position(523px, 305px, 142px, 448px);
     background: rgba(18, 18, 18, 0.45);
-    position: $position;
+    @extend %pos;
 
 
     >.slogen1 {
@@ -185,36 +187,36 @@ $family4: 优设标题圆;
       @extend %align;
       font: 400 60px/72px $family1;
       color: $color255-1;
-      position: $position;
+      @extend %pos;
     }
 
     >.slogen2 {
       @include size-position(414px, 28px, 49px, 193px);
       @extend %align;
       // font: 400 20px/28px $family2;
-      font: 400 18px/28px $family2;//未设字体
+      font: 400 18px/28px $family2; //未设字体
       color: $color255-1;
-      position: $position;
+      @extend %pos;
     }
 
     >.learnBackground {
       @include size-position(139px, 45px, 49px, 238px);
       background: rgba(219, 123, 123, 1);
-      position: $position;
+      @extend %pos;
 
       >.learnMore {
         @include size-position(99px, 28px, 8px, 9px);
         @extend %align;
         // font: 400 20px/28px $family2;
-        font: 400 19px/28px $family2;//未设字体
+        font: 400 19px/28px $family2; //未设字体
         letter-spacing: 5px;
         color: $color255-1;
-        position: $position;
+        @extend %pos;
       }
 
       >.arrow {
         @include size-position(24px, 24px, 107px, 11px);
-        position: $position;
+        @extend %pos;
       }
 
       // .right{
@@ -228,17 +230,15 @@ $family4: 优设标题圆;
       .right {
         @include size-position(9px, 12px, 9px, 6px);
         background: $color255-1;
-        position: $position;
+        @extend %pos;
       }
     }
   }
 
   %roller {
-    width: 50px;
-    height: 6px;
+    @include size-position(50px, 6px, auto, 910px);
     background: $color255-04;
-    position: $position;
-    top: 910px;
+    @extend %pos;
   }
 
   >.roller1 {
@@ -260,14 +260,14 @@ $family4: 优设标题圆;
 .aboutUs {
   @include size-position(720px, 764px, 0, 855px);
   background: rgba(238, 106, 107, 1);
-  position: $position;
+  @extend %pos;
 
   >.aboutTitle {
     @include size-position(192px, 58px, 69px, 70px);
     @extend %align;
     font: 400 48px/58px $family1;
     color: $color255-1;
-    position: $position;
+    @extend %pos;
   }
 
   >.article {
@@ -275,28 +275,28 @@ $family4: 优设标题圆;
     @extend %align;
     font: 400 18px/25.7px $family3;
     color: $color255-1;
-    position: $position;
+    @extend %pos;
     white-space: pre-wrap;
   }
 }
 
 .numberBackground {
   @include size-position(720px, 764px, 720px, 855px);
-  position: $position;
+  @extend %pos;
 
   %bigNumber {
     @extend %align;
     font: 400 72px/94px $family4;
     letter-spacing: 5px;
     color: rgba(47, 46, 52, 1);
-    position: $position;
+    @extend %pos;
   }
 
   %smallNumber {
     @extend %align;
     font: 400 14px/21px $family3;
     color: rgba(166, 166, 166, 1);
-    position: $position;
+    @extend %pos;
   }
 
   >.number1 {
@@ -335,19 +335,17 @@ $family4: 优设标题圆;
   @extend %align;
   font: 400 48px/58px $family1;
   color: rgba(47, 46, 52, 1);
-  position: $position;
+  @extend %pos;
 }
 
 %spread {
-  width: 108px;
-  height: 420px;
-  top: 1815px;
-  position: $position;
+  @include size-position(108px, 420px, auto, 1815px);
+  @extend %pos;
 }
 
 .spread01 {
   @include size-position(630px, 420px, 69px, 1815px);
-  position: $position;
+  @extend %pos;
   background: rgba(238, 106, 107, 0.85);
 
 }
@@ -388,25 +386,25 @@ $family4: 优设标题圆;
   @extend %align;
   font: 400 48px/58px $family1;
   color: $color77-1;
-  position: $position;
+  @extend %pos;
 }
 
 %upPage {
-  top: 2590px;
-  width: 359px;
-  height: 189px;
-  background-image: url(https://img.js.design/assets/smartFill/img348164da74c4b8.jpeg);
-  background-color: rgba(204, 204, 204, 1);
-  position: $position;
+  @include size-position(359px, 189px, auto, 2590px);
+
+  background: {
+    image: url(https://img.js.design/assets/smartFill/img348164da74c4b8.jpeg);
+    color: rgba(204, 204, 204, 1);
+  }
+
+  @extend %pos;
   background-size: 100% 100%;
 }
 
 %underPage {
-  top: 2779px;
-  width: 359px;
-  height: 280px;
+  @include size-position(359px, 280px, auto, 2779px);
   background: rgba(238, 106, 107, 1);
-  position: $position;
+  @extend %pos;
 }
 
 $left1: 87px;
@@ -448,7 +446,7 @@ $left3: 995px;
   @extend %align;
   font: 700 24px/33px $family2;
   color: $color255-1;
-  position: $position;
+  @extend %pos;
 }
 
 .content {
@@ -456,7 +454,7 @@ $left3: 995px;
   font: 400 14px/21.25px $family3;
   @extend %align;
   color: rgba(255, 255, 255, 1);
-  position: $position;
+  @extend %pos;
 
 }
 
@@ -465,11 +463,11 @@ $left3: 995px;
   @extend %align;
   font: 400 48px/58px $family1;
   color: $color77-1;
-  position: $position;
+  @extend %pos;
 }
 
 .partnerImg {
   @include size-position(1219px, 245px, 135px, 3237px);
-  position: $position;
+  @extend %pos;
 }
 </style>
