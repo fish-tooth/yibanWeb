@@ -1,4 +1,5 @@
 <template>
+    <div style="margin: 0 auto" >
     <div class="topBox">
         <div class="leftCube"></div>
         <div class="rightCube">
@@ -10,7 +11,7 @@
                 <div class="lecture"><a href="#" class="lectureTo">学霸讲座  ></a></div>
         </div>
         <div class="prePhoto"></div>
-        <p class="caseText">办学案例</p>    
+        <p class="caseText">伴学案例</p>    
     </div>
     <div class="midBox">
             <div class="title">以伴教育专项1</div>
@@ -33,15 +34,15 @@
                <div class="nameBg"><div class="projectName">“以爱之名，伴你成长”青少年关爱帮扶活动</div></div>
             </div>
         <div class="dataShow">
-            <div class="data1"><div class="dataNum1">4</div><div class="dataTitle1">项目总数</div></div>
-            <div class="data2"><div class="dataNum2">5100</div><div class="dataTitle2">志愿者人数</div></div>
-            <div class="data3"><div class="dataNum3">3124</div><div class="dataTitle3">服务学生数</div></div>
-            <div class="data4"><div class="dataNum4">2140</div><div class="dataTitle4">课堂总量</div></div>
+            <div class="data1"><div class="dataNum1"><span style="border-bottom: 2px solid rgba(173, 106, 106, 1); ">4</span></div><div class="dataTitle1">项目总数</div></div>
+            <div class="data2"><div class="dataNum2"><span style="border-bottom: 2px solid rgba(173, 106, 106, 1); ">5100</span></div><div class="dataTitle2">志愿者人数</div></div>
+            <div class="data3"><div class="dataNum3"><span style="border-bottom: 2px solid rgba(173, 106, 106, 1); ">3124</span></div><div class="dataTitle3">服务学生数</div></div>
+            <div class="data4"><div class="dataNum4"><span style="border-bottom: 2px solid rgba(173, 106, 106, 1); ">2140</span></div><div class="dataTitle4">课堂总量</div></div>
         </div>
     </div>
     
     <div class="botmBox">
-        <div class="classicCaseText">经典案例 ｜CASE</div>
+    <div class="classicCaseText">经典案例 ｜CASE</div>
         <div class="cases">
             <!-- 插入链接 -->
             <div class="case1">
@@ -66,10 +67,36 @@
         <div class="blogTitle">
             <span class="blogImg"></span>
             <span class="blogText">志愿分享 | BLOG</span>
+            <!-- <span class="blogText">BLOG</span> -->
         </div>
+        
     </div>
+</div>
 </template>
 
+<!-- Swiper JS -->
+<script src="./js/swiper.min.js"></script>
+
+
+<!--    test    -->
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflow: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true
+    }
+});
+</script>
+<!--    test    -->
 
 <style lang="scss" scoped>
 
@@ -80,18 +107,22 @@
     z-index: 2;
 }
 .topBox {
+    display: flex;
+    // justify-content: center;
     left: 0px;
     // top: 0px;
     top: 103px;
-    width: 1440px;
+    width: 100%;
     height: 906px;
     opacity: 1;
     //add
     position: absolute;
+    align-items: center;
 }
 .leftCube {
-    left: 121px;
-    top: 19px;
+    // left: 121px;
+    left: 10%;
+    top: -155px;
     width: 546px;
     height: 525px;
     opacity: 1;
@@ -103,7 +134,8 @@
     z-index: 2;
 }
 .rightCube {
-    left: 564px;
+    // left: 564px;
+    // right: 1%;
     top: 49px;
     width: 816px;
     height: 857px;
@@ -112,23 +144,26 @@
     background: rgba(223, 114, 113, 1);
     box-shadow: 0px 4px 4px 10px rgba(0, 0, 0, 0.25);
     //add
-    position: absolute;
+    // position: absolute;
+    position: relative;
     z-index: 1;
 }
 .prePhoto {
-    left: 58px;
+    left: 5%;
     top: 478px;
     width: 569px;
     height: 357px;
     opacity: 1;
     background: url(https://img.js.design/assets/img/6380d03ba34f1378224817e9.png#0146474d33854765a8ea9969abccb7ac);
     //add
-    @extend %pos;
+    z-index: 3;
+    position: absolute;
     
 
 }
 .caseText {
-    left: 547px;
+    // left: 547px;
+    left: 35%;
     top: 330px;
     width: 242px;
     height: 49px;
@@ -156,7 +191,7 @@
 }
 
 .stuNum {
-    right: 70px;
+    right: 10%;
     top: 390px;
     width: 140px;
     height: 26px;
@@ -165,7 +200,7 @@
     @extend %pos;
 }
 .reportNum {
-    right: 70px;
+    right: 10%;
     top: 420px;
     width: 140px;
     height: 26px;
@@ -174,7 +209,7 @@
 }
 .eduHelp {
     // width: 180px;
-    right: 70px;
+    right: 10%;
     top: 466px;
     width: 180px;
     height: 53px;
@@ -183,7 +218,7 @@
 
 }
 .eduCoop {
-    right: 70px;
+    right: 10%;
     top: 536px;
     width: 234px;
     height: 53px;
@@ -199,7 +234,7 @@
     color: rgba(255, 255, 255, 1);
 }
 .course {
-    left: 536px;
+    right: 10%;
     top: 676px;
     width: 207px;
     height: 65px;
@@ -211,7 +246,7 @@
     
 }
 .lecture {
-    left: 536px;
+    right: 10%;
     top: 740px;
     width: 207px;
     height: 65px;
@@ -226,16 +261,18 @@
     @extend %font2;
 }
 .midBox {
+    display: flex;
     left: 0px;
     top: 1010px;
-    width: 1440px;
+    width: 100%;
     // width: 100%;
     height: 998px;
     //add
     position: absolute;
 }
 .projectIntro {
-    left: 70px;
+    // left: 70px;
+    left: 20%;
     top: 1141px;
     width: 465px;
     height: 589.25px;
@@ -284,11 +321,14 @@
     height: 64.25px;
     opacity: 1;
     background: rgba(209, 146, 146, 0.56);
-    position: absolute;
+    // position: absolute;
+    position: relative;
 
 }
 .video {
-    left: 670px;
+    // left: 670px;
+    display: flex;
+    right: 10%;
     top: 192px;
     width: 600px;
     height: 400px;
@@ -296,6 +336,7 @@
     border-radius: 13px;
     background: url(https://img.js.design/assets/img/63841db370139645b61f7887.png#68c43d6f1a06b5512316ea25cbdc98d5);
     position: absolute;
+    // position: relative;
 }
 .nameBg {
     position: absolute;
@@ -352,26 +393,18 @@
     display: flex;
     position: absolute;
     bottom: 0px;
-    width: 1440px;
+    width: 100%;
     height: 171px;
+    margin: 0 auto;
     opacity: 1;
     background: linear-gradient(180deg, rgba(223, 114, 113, 0) 0%, rgba(222, 115, 113, 0.08) 28.57%, rgba(222, 115, 113, 0.15) 84.45%);
-
+    align-items: center;
 }
 
-.data1 {
-    position: relative;
-    margin-left: 130px;
-    width: 300px;
-    height: 171px;
-    line-height: 171px;
-}
 
 %num {
-    position: absolute;
-    // margin-left: 130px;
-    left: 40%;
-    top: 22px;
+    display: flex;
+    justify-content: center;
     // width: 40px;
     height: 72px;
     opacity: 1;
@@ -380,14 +413,14 @@
     font-weight: 400;
     line-height: 72px;
     color: rgba(0, 0, 0, 1);
-    border-bottom: 2px solid rgba(173, 106, 106, 1); 
+    // border-bottom: 2px solid rgba(173, 106, 106, 1); 
 }
 .dataNum1, .dataNum2, .dataNum3, .dataNum4 {
     @extend %num;
 }
 %dataTitle {
-    position: absolute;
-    left: 37%;
+    display: flex;
+    justify-content: center;
     top: 60%;
     // width: 125px;
     height: 44px;
@@ -399,81 +432,71 @@
     line-height: 44px;
     color: rgba(0, 0, 0, 1);
 }
-.dataTitle1 {
-    @extend %dataTitle;
-    left: 28%;
-}
-.dataTitle2, .dataTitle3 {
+.dataTitle1, .dataTitle2, .dataTitle3, .dataTitle4{
     @extend %dataTitle;
 }
-.dataTitle4 {
-    @extend %dataTitle;
-    left: 43%;
+
+.data1 {
+    width: 25%;
+    height: 171px;
+    line-height: 171px;
 }
 .data2 {
     position: relative;
-    width: 300px;
+    width: 25%;
     height: 171px;
     line-height: 171px;
 }
 .data3 {
     position: relative;
-    width: 300px;
+    width: 25%;
     height: 171px;
     line-height: 171px;
 }
 .data4 {
     position: relative;
-    width: 300px;
+    width: 25%;
     height: 171px;
     line-height: 171px;
 }
 
 .botmBox {
     position: absolute;
-    // top: 2127px;
-    top: 2157px;
+    top: 2127px;
+    margin: 0 auto;
     // margin-left: 160px;
-    width: 1440px;
+    width: 100%;
     // width: 100%;
-    height: 863px;
-    // background-color: yellow;
+    height: 840px;
 
 }
 .classicCaseText {
-    left: 456px;
-    top: 0px;
+    // position: absolute;
+    // top: 2127px;
+    margin: 0 auto;
+    // left: 456px;
     width: 399px;
     height: 75px;
     opacity: 1;
     /** 文本1 */
     font-size: 48px;
     font-weight: 500;
-    letter-spacing: 0px;
-    // line-height: 0px;
     color: rgba(0, 0, 0, 1);
     justify-content: center;
-    // text-align: center;
-    // vertical-align: top;
-    position: absolute;
 }
 .cases {
     display: flex;
-    position: absolute;
-    top: 88px;
+    justify-content: center;
     width: 100%;
     height: 501px;
     // background-color: rgb(118, 144, 166);
 }
 %case {
-    
-    top: 2290px;
     width: 628px;
     height: 501px;
 }
 .case1 {
-    position: sticky;
-    left: 61px;
+    // left: 61px;
     @extend %case;
 }
 .case1 .casePhoto1 {
@@ -506,8 +529,7 @@
 
 }
 .case2 {
-    // position: sticky;
-    margin-left: 100px;
+    margin-left: 5%;
     @extend %case;
 }
 .case2 .casePhoto2 {
@@ -526,11 +548,9 @@
 }
 .turn {
     display: flex;
-    position: absolute;
-    // left: 538px;
-    left: 600px;
-    top: 630px;
-   
+    justify-content: center;
+    vertical-align: middle;
+    margin-top: 40px;
 }
 .turn .last{
     width: 97px;
@@ -550,8 +570,9 @@
 //志愿分享blog
 .blogBox {
     // left: -6px;
-    top: 2930px;
-    width: 1440px;
+    display: flex;
+    top: 2900px;
+    width: 100%;
     // width: 100%;
     height: 624px;
     opacity: 1;
@@ -573,7 +594,8 @@
 }
 .blogText {
     position: absolute;
-    display: inline-block;
+    // display: inline-block;
+    display: flex;
     left: 161px;
     top: 20px;
     width: 393px;
@@ -587,6 +609,6 @@
     color: rgba(0, 0, 0, 1);
     text-align: left;
     vertical-align: top;
-    
 }
+
 </style>
