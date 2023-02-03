@@ -154,7 +154,7 @@ export default {
     // width: 37%;
     height: 525px;
     opacity: 1;
-    background: linear-gradient(-50deg, rgba(237, 157, 157, 1) 50%, rgba(224, 184, 184, 0.01) 100%);
+    background: linear-gradient(-70deg, rgba(237, 157, 157, 1) 50%, rgba(224, 184, 184, 0.01) 100%);
     // box-shadow: 0px 4px 4px 10px rgba(0, 0, 0, 0.25);
     box-shadow: 10px 25px 8px 15px rgb(0 0 0 / 25%);
     //add
@@ -721,6 +721,7 @@ export default {
         // width: 315px;
         width: 40%;
         height: 675px;
+        // background: linear-gradient(-50deg, rgba(237, 157, 157, 1) 70%, rgba(224, 184, 184, 0.01) 100%);
     }
 
     .rightCube {
@@ -744,9 +745,42 @@ export default {
         height: 389px;
     }
 
+    // 伴学案例四个字
     .caseText {
         // left: 211px;
         left: 27%;
+        font-size: 48px;
+    }
+
+    .video {
+        margin-left: 7%;
+        margin-right: 14%;
+        // width: 574px;
+        width: 73%;
+
+    }
+
+    %case {
+        // width: 628px;
+        width: 40%;
+        // height: 501px;
+        height: 450px;
+    }
+
+    .case1 {
+        margin-left: 4%;
+
+    }
+
+    .casePhoto1,
+    .casePhoto2 {
+        width: 100%;
+        // height: 432px;
+    }
+
+    .caseIntro1,
+    .caseIntro2 {
+        width: 100%;
     }
 
     .case2 {
@@ -765,11 +799,11 @@ export default {
         // width: 315px;
         width: 40%;
         height: 675px;
+        background: linear-gradient(-80deg, rgba(237, 157, 157, 1) 50%, rgba(224, 184, 184, 0.01) 100%);
     }
 
     .rightCube {
         // left: 564px;
-        // right: 1%;
         top: 210px;
         // left: 309px;
         left: 30%;
@@ -966,6 +1000,10 @@ export default {
 
 // 768px
 @media screen and (max-width: 768px) {
+    .leftCube {
+        background: linear-gradient(-90deg, rgba(237, 157, 157, 1) 50%, rgba(224, 184, 184, 0.01) 100%);
+    }
+
     .midBox {
         width: 100%;
         height: auto;
