@@ -1,0 +1,117 @@
+/* #app {
+    height: 100%
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+} */
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 95%;
+    height: auto;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+}
+
+.swiper-slide {
+    /* 修改边距 */
+    padding: 4%;
+    background-position: center;
+    background-size: cover;
+    /* 改变边框为圆角 */
+    border-radius: 13px;
+    /* width: 300px;
+    height: 300px; */
+    background-color: #fff;
+    width: 501px;
+    height: 486px;
+}
+
+.swiper-slide img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 12%;
+    width: 75%;
+    height: 53%;
+}
+
+/* .swiper-silde-last {
+    transform: translate3d(-500px, -0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+} */
+.swiper .swiperNext {
+    transform: translate3d(-90%, -80%, 0px);
+}
+
+/* 改变小圆点颜色 */
+.swiper-pagination-bullet-active {
+    --swiper-theme-color: rgba(209, 146, 146, 1);
+}
+
+/* 改变小圆点的大小 */
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+}
+
+/* 改变内部图片边框为圆角 */
+img {
+    border-radius: 13px;
+}
+
+.volunName {
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.volunShareText {
+    margin-top: 6%;
+    opacity: 1;
+    /** 文本1 */
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(56, 56, 56, 1);
+    text-align: left;
+    /* vertical-align: top; */
+
+}
+
+/* 透视深度 */
+.swiper-3d {
+    perspective: 600px;
+}
+
+/* 
+@media(max-width: 992px) {
+    
+    .swiper-horizontal .swiper-pagination {
+        bottom: 40%;
+        right: 0px;
+        left: auto;
+        width: 20px;
+        height: auto;
+    }
+
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+      
+    }
+}
+
+@media(max-width: 768px) {} */
+
+
+/* 伴学案例轮播图 end*/

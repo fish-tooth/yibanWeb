@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-yiban",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 3000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@element-plus/nuxt": "^1.0.3",
+    "nuxt": "^3.2.3",
+    "path": "^0.12.7",
+    "postcss-px-to-viewport-8-plugin": "^1.2.0",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "element-plus": "^2.2.32",
+    "swiper": "^8.0.0"
+  }
+}
