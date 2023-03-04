@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Header></Header>
+  <!-- <Header></Header> -->
   <router-view></router-view>
-  <Footer></Footer>
+  <!-- <Footer></Footer> -->
 </template>

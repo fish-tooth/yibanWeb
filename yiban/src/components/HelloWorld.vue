@@ -13,4 +13,6 @@ const msg = ref("你好");
   <h1>{{ msg }}</h1>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

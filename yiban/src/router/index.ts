@@ -5,17 +5,25 @@ const routes = [
     path: "/:catchAll(.*)",
     component: () => import("../components/notFound.vue"),
   },
+  // {
+  //   path: "/",
+  //   name: "home",
+  //   component: () => import("../components/home.vue"),
+  // },
   {
+    // path: "/activityCase",
     path: "/",
-    name: "home",
-    component: () => import("../components/home.vue"),
-  },
-  {
-    path: "/activityCase",
-    // path: "/",
     name: "activityCase",
     component: () => import("../components/activityCase.vue"),
   },
+  // Swiper
+  // {
+  //   path: "/",
+  //   // path: "/",
+  //   name: "Swiper",
+  //   component: () => import("../components/Swiper.vue"),
+  // },
+
 ];
 
 const router = createRouter({
